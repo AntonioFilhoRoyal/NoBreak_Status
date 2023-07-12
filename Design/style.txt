@@ -1,0 +1,4 @@
+Desktop: 1440x900
+Notebook: 1024x760
+Tablet: 800x600
+Smartphone: 320x480
