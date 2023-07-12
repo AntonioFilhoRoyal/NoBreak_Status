@@ -2,3 +2,5 @@ Desktop: 1440x900
 Notebook: 1024x760
 Tablet: 800x600
 Smartphone: 320x480
+
+Fontes: Roboto Regular, Roboto 700 Bold, Ubuntu Regular, Ubuntu 500 Medium, Public Sans Light 200, Public Sans Regular, Public Sans SemiBold 600

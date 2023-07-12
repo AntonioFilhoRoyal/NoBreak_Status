@@ -43,5 +43,13 @@ Custo?:
 O custo total do aplicativo sera para publica na play store: R$ 125,00. Por enquanto.
 --------------------
 
-Telas: 11/07/2023
+11/07/2023 - Telas
 Criação dos design das tela, Desktop, notebook, Tablet e Smartphone.
+--------------------
+
+12/07/2023 - Inicio da tela para smartphone: 320x480
+Criação da tela: 320x480
+Interface web
+Organização dos elementos HTML5 dentro da web
+Estilização da aplicação com CSS3
+Definição de cada parte da aplicação
