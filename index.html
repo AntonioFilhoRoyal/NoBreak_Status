@@ -15,21 +15,43 @@
 <body class="body">
     <header class="header"></header>
     <main class="main">
-        <div class="header-div"></div>
+        <div class="header-div">
+            <h3 class="h3 font-ubuntu-medium">Nobreak Status</h3>
+        </div>
 
         <div class="main-div">
-            <section class="section-form"></section>
+            <section class="section-form">
+                <form action="">
+                    <input  class="input-equipment" type="text">
+                    <input  class="input-consumption" type="text">
+                    <button class="button-add-nobreak" type="submit">ADD</button>
+                </form>
+            </section>
             <section class="section-nobreak-status">
-                <aside class="aside-nobreak-profile"></aside>
+                <aside class="aside-nobreak-profile">
+                    <ul class="profile-list">
+                       <h5 class="h5 font-public-sans">nome</h5>
+                       <h5 class="h5 font-public-sans">marca</h5>
+                       <h5 class="h5 font-public-sans">modelo</h5>
+                       <h5 class="h5 ">0000/0000</h5>
+                       
+                    </ul>
+                </aside>
                 <aside class="aside-status">
                     <div class="status-ok status"></div>
                     <div class="status-alert status"></div>
-                    <div class="status-waring status"></div>
+                    <div class="status-danger status"></div>
                 </aside>
             </section>
             <section class="section-nobreak">
-                <aside class="aside-nobreak"></aside>
-                <aside class="aside-list"></aside>
+                <aside class="aside-nobreak" disabled>
+                    <span class="font-ubuntu-medium">Area em desenvolvimento</span>
+                </aside>
+                <aside class="aside-list">
+                    <ul class="list-equipament">
+                        
+                    </ul>
+                </aside>
             </section>
         </div>
     </main>

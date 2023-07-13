@@ -4,3 +4,8 @@ Tablet: 800x600
 Smartphone: 320x480
 
 Fontes: Roboto Regular, Roboto 700 Bold, Ubuntu Regular, Ubuntu 500 Medium, Public Sans Light 200, Public Sans Regular, Public Sans SemiBold 600
+
+Dark Color: #001105, #002211, #2b2b2b, #000000
+Light Color: #45FF7C, #ADFFC5, #FFFFFF, #C3C3C3
+
+

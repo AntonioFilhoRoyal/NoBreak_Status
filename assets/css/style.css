@@ -37,11 +37,22 @@
 .font-public-sans-light{font-family: 'Public Sans'; font-weight: 200;}
 .font-public-sans-semibold{font-family: 'Public Sans'; font-weight: 600;}
 
+input{
+    outline: none;
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+ul{
+    list-style: none;
+}
+
 /* LOCAL: Body Main Footer */
 
 body{
-    background-color: #bbbaba;
-    color: #ffffff;
+    background-color: #000000;
+    color: #d4d4d4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,12 +67,18 @@ main{
     display: flex;
     flex-direction: column;
 
+    border: 1px rgb(110, 110, 110) solid;
 }
 
 .header-div{
     min-width: 100%;
     min-height: 7vh;
-    background-color: #2b2b2b;
+    background-color: #002211;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .main-div{
@@ -75,7 +92,42 @@ main{
 .main-div .section-form{
     width: 100%;
     min-height: 8vh;
-    background-color: #aa2222;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section-form .input-equipment{
+    width: 150px;
+}
+
+.section-form .input-consumption{
+    width: 80px;
+}
+
+.section-form .button-add-nobreak{
+    width: 50px;
+    height: 30px;
+
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.section-nobreak-status .aside-nobreak-profile{
+    width: 98%;
+    min-height: 5vh;
+    background-color: #292929;
+
+    border-radius: 0px 30px 0px 0px;
+}
+
+.aside-nobreak-profile .profile-list{
+    padding-left: 2.5px;
 }
 
 .main-div .section-nobreak-status{
@@ -85,7 +137,6 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border: 1px solid red;
 }
 
 .aside-status{
@@ -98,18 +149,15 @@ main{
 
 .aside-status .status{
     margin: 1.5px;
-    width: 15px;
-    height: 15px;
+    width: 100px;
+    height: 25px;
     border-radius: 100px;
-    background-color: #ffffff;
 }
 
-.section-nobreak-status aside{
-    margin: 2px;
-    width: 100%;
-    min-height: 5vh;
-    background-color: yellow;
-}
+.status-ok{background-color: green;}
+.status-alert{background-color: yellow;}
+.status-danger{background-color: red;}
+
 
 .main-div .section-nobreak{
     width: 100%;
@@ -118,12 +166,35 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border: 1px solid red;
 }
 
-.section-nobreak aside{
+.section-nobreak .aside-nobreak{
     margin: 2px;
     width: 100%;
     min-height: 10vh;
-    background-color: rgb(0, 255, 42);
+    background-color: #292929;
+    cursor: not-allowed;
+}
+
+.section-nobreak .aside-nobreak span{
+    font-size: 14px;
+    color: rgb(255, 183, 183);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+
+    transition: 0.5s ease-in-out;
+}
+
+.section-nobreak .aside-nobreak:hover > span{
+    visibility: visible;
+}
+
+.section-nobreak .aside-list{
+    margin: 2px;
+    width: 100%;
+    min-height: 10vh;
+    background-color: #292929;
 }
