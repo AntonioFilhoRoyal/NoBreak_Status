@@ -36,6 +36,6 @@ function clearInput(){
 
 function consumptionNobreak(consumption){
     const currentConsumption = consumption;
-    const maxConsumtion = 500;
+    const maxConsumtion = 500; // valor demostrativo
     areaConsumption.innerHTML =`${currentConsumption}/${maxConsumtion}`;
 } 

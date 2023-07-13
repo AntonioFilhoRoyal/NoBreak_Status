@@ -53,3 +53,23 @@ Interface web
 Organização dos elementos HTML5 dentro da web
 Estilização da aplicação com CSS3
 Definição de cada parte da aplicação
+--------------------
+12/07/2023 part2 - Reajustes na tela e inserção de scripts
+Feito a inserção do script que enviara a lista para o nobreak
+ajustes na estilização
+
+function createdLi(){
+    const li = document.createElement("li");
+    li.classList.add("item-list");
+    li.classList.add("font-public-sans");
+    return li;
+}
+
+function listNobreak(equipament, consumption){
+    const li = createdLi();
+    li.innerText = `${equipament} - ${consumption}V`;
+    ulList.appendChild(li);
+    clearInput();
+}
+
+criando um elemento "li" e lançando ele como um filho de "ul", carregando os itens dentro da lista
