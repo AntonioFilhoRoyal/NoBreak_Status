@@ -198,3 +198,10 @@ main{
     min-height: 10vh;
     background-color: #292929;
 }
+
+.section-nobreak .aside-list .item-list{
+    margin-top: 2px;
+    padding: 0px 0px 0px 3px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
