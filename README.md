@@ -42,6 +42,12 @@ caso a carga atual seja superior a carga maxima o sistema parar ie mostrado uma 
 Custo?:
 O custo total do aplicativo sera para publica na play store: R$ 125,00. Por enquanto.
 --------------------
+05/07/2023 - Documentação
+Preparação de metodos, nome, linguagens etc... Começando a documentação do software.
+Fase 1 - Preparação dos designers para diversos dispositovs (OBS: software padrão sera mobile).
+Fase 2 - Començando o desenvolvimento: Estrutura HTML5 e estilização CSS3
+Fase 3 - Script para listar os equipamento: Estrutura do script que enviara para a lista os equipamentos junto com o consumo deles, salvando brevemente na lista ate o final do uso do NoBreak atual.
+Fase 4 - Script de calculo consumoEquipamento x cargaMaxNobreak.
 
 11/07/2023 - Telas
 Criação dos design das tela, Desktop, notebook, Tablet e Smartphone.
@@ -73,3 +79,7 @@ function listNobreak(equipament, consumption){
 }
 
 criando um elemento "li" e lançando ele como um filho de "ul", carregando os itens dentro da lista
+--------------------
+
+12/07/2023 - Script de calculo do consumo atual e consumo maximo
+Começa o script para calcular o currentConsumption(consumo do equipamento) e maxConsumption(Carga maxima do NoBreak)
