@@ -8,4 +8,5 @@ Fontes: Roboto Regular, Roboto 700 Bold, Ubuntu Regular, Ubuntu 500 Medium, Publ
 Dark Color: #001105, #002211, #2b2b2b, #000000
 Light Color: #45FF7C, #ADFFC5, #FFFFFF, #C3C3C3
 
-
+A aplicação deve ser leve e perfomatica, fazendo uso das melhores praticas de desenvolvimento junto a um
+codigo limpo, de facil manuseio e rastreio de comandos.
