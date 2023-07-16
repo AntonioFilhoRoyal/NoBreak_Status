@@ -62,9 +62,11 @@ main{
     margin: 60px auto;
     min-width: 320px;
     min-height: auto;
-    background-color: #001105;
+    background-color: #5daf76;
 
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 
     border: 1px rgb(110, 110, 110) solid;
@@ -84,6 +86,7 @@ main{
 .main-div{
     min-width: 100%;
     min-height: auto;
+    background-color: #000c05;
 
     display: flex;
     flex-direction: column;
@@ -132,6 +135,12 @@ main{
 
 .aside-nobreak-profile .profile-list{
     padding-left: 2.5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-nobreak-profile .profile-list .area-consumption{
+
 }
 
 .main-div .section-nobreak-status{
@@ -208,4 +217,10 @@ main{
     padding: 0px 0px 0px 3px;
     font-size: 12px;
     letter-spacing: 1.5px;
+}
+
+.footer-div{
+    margin: 0 auto;
+
+    
 }

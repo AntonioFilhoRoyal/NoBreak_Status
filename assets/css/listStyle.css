@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.ul {
+    margin-top: 5px;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+li p {
+    margin: 1.5px 5px;
+}
+
+main {
+    width: 290px;
+    height: auto;
+    background-color: rgb(0, 0, 70);
+    border: 1px solid green;
+}
+
+h5 {
+    text-align: center;
+}
+
+.p-alert {
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+}
+
+input {
+    margin-left: 10px;
+    padding-left: 2px;
+}
+
+button {
+    margin-left: 5px;
+}
+
+
+li:hover {
+    cursor: pointer;
+    background-color: rgb(0, 43, 80);
+}
