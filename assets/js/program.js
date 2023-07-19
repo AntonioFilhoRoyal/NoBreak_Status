@@ -1,6 +1,9 @@
 console.log("Estou aqui");
 
-                // FUNÇÕES DE CRIAÇÃO DE ELEMENTOS DA LISTA
+const main = document.querySelector('.main');
+const list = document.querySelector('.list');
+
+// FUNÇÕES DE CRIAÇÃO DE ELEMENTOS DA LISTA
 // EQUIPAMENTO
 const inputEquipament = document.querySelector('.input-equipment');
 const inputConsumption = document.querySelector('.input-consumption');
@@ -18,9 +21,12 @@ function createdLi() {
 // LISTA DE EQUIPAMENTOS
 function listNobreak(equipament, consumption) {
     const li = createdLi();
-    li.innerText = `${equipament} - ${consumption}V`;
+    const aux = consumption;
+    li.innerText = `${equipament} - ${aux}V`;
     ulList.appendChild(li);
     clearInput();
+
+    return aux;
 }
 
 // ADICIONA UM EQUIPAMENTO A LISTA
@@ -30,7 +36,7 @@ const buttonAddList = document.querySelector('.button-add-nobreak')
 
         if (!inputEquipament.value && !inputConsumption.value) return;
         listNobreak(inputEquipament.value, inputConsumption.value);
-});
+    });
 
 // FUNÇÃO LIMPAR
 function clearInput() {
@@ -40,24 +46,106 @@ function clearInput() {
 }
 
 
-                // FUNÇÕES DE LANÇAMENTO DO PERFIL DE NOBREAK
+// FUNÇÕES DE LANÇAMENTO DO PERFIL DE NOBREAK
 // ESPECIFIÇÕES DO NOBREAK
-const marca = document.querySelector('.area-marca');
+const areaBrand = document.querySelector('.area-brand');
 const areaModel = document.querySelector('.area-model');
 const areaLink = document.querySelector('.area-link');
-// AREA DE CALCULO DO NOBREAK
 const areaConsumption = document.querySelector('.area-consumption');
 
+function nobreakProfile(brand, model, link, consumption){
+    areaBrand.innerHTML = brand;
+    areaModel.innerHTML = model;
+    areaLink.innerHTML = link;
+    areaConsumption.innerHTML = consumption;
+}
 
-                // FUNÇÕES PARA CALCULO DO CONSUMO DO NOBREAK
+// AREA DE CALCULO DO NOBREAK
 
 
-                // FUNCÕES DE INICIO DE PAGINA, LANÇANDO UMA LISTA
+
+// FUNÇÕES PARA CALCULO DO CONSUMO DO NOBREAK
+function calcConsumption(){
+
+}
 
 
+// FUNCÕES DE INICIO DE PAGINA, LANÇANDO UMA LISTA
+const buttonCoice = document.querySelector(".choice-button");
+const inputChoice = document.querySelector(".choice-input");
+const ulChoice = document.querySelector('.choice-ul');
+
+
+function createLi() {
+    const li = document.createElement("li");
+    return li;
+}
+
+function createList(marca, model, poten, valueButton){
+    
+    const li = createLi();
+    li.classList.add("choice-item-nobreak");
+
+    const p1 = document.createElement("p");
+    const p2 = document.createElement("p");
+    const button = document.createElement("button");
+
+    p1.classList.add("choice-marca");
+    p2.classList.add("choice-model");
+    button.classList.add("choice-value");
+
+    p1.innerHTML = `${marca} - ${model}`;
+    p2.innerHTML = `${poten}v`;
+    button.innerHTML = `NB ${valueButton}`;
+    button.value = valueButton;
+
+    li.appendChild(p1);
+    li.appendChild(p2);
+ //   li.appendChild(button);
+    ulChoice.appendChild(li);
+}
+
+window.addEventListener("load", (event) => {
+
+    for(let i = 0; i < objetoNobreak.length; i++){
+        if(objetoNobreak[i].potencia <= 500){
+           createList(objetoNobreak[i].marca, objetoNobreak[i].modelo, 
+            objetoNobreak[i].potencia, objetoNobreak[i].value);
+        }
+    }
+
+});
+
+
+buttonCoice.addEventListener('click', e => {
+    const choice = inputChoice.value;
+    
+    if(choice == " ") return;
+
+    for(let i = 0; i < objetoNobreak.length; i++){
+       // if(choice != objetoNobreak[i].value) return;
+        
+        if(choice == objetoNobreak[i].value){
+            nobreakProfile(objetoNobreak[i].marca, objetoNobreak[i].modelo, objetoNobreak[i].link, objetoNobreak[i].potencia);
+            console.log(objetoNobreak[i].marca, objetoNobreak[i].modelo, objetoNobreak[i].potencia);
+        }
+    }
+
+    if(list.style.display == "flex"){
+        list.style.display = "none";
+    } else{
+        list.style.display = "none";
+    }
+
+})
 
 // OBEJTOS NOBREAK
-const objetoNobreak = [];
+const objetoNobreak = [
+    {marca : "NHS", modelo : "NHS Mini III", potencia : 500, link : "link.com.br", value : 1},
+    {marca : "NHS", modelo : "NHS Compact III", potencia : 350, link : "link.com.br", value : 2},
+    {marca : "NHS", modelo : "NHS Bivolt", potencia : 420, link : "link.com.br", value : 3},
+    {marca : "Microsol", modelo : "Mod.Iso 350v", potencia : 350, link : "link.com.br", value : 4}
+];
 
 
 

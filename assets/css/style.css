@@ -58,11 +58,11 @@ body{
     align-items: center;
 }
 
-main{
+.main{
     margin: 60px auto;
     min-width: 320px;
     min-height: auto;
-    background-color: #5daf76;
+    background-color: #002211;
 
     display: flex;
     justify-content: center;
@@ -130,7 +130,7 @@ main{
     min-height: auto;
     background-color: #292929;
 
-    border-radius: 0px 30px 0px 0px;
+    border-radius: 0px 10px 0px 0px;
 }
 
 .aside-nobreak-profile .profile-list{
@@ -219,8 +219,26 @@ main{
     letter-spacing: 1.5px;
 }
 
-.footer-div{
-    margin: 0 auto;
+.list{
+    position: absolute;
+    min-width: 320px;
+    min-height: 490px;
 
-    
+    background-color: #000000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.list .p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.effect-blur{
+    background-color: #002211;
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    background-color: transparent;
 }

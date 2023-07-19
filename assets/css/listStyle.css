@@ -1,32 +1,19 @@
-body {
-    background-color: black;
-    color: white;
-}
-
-.ul {
+.choice-ul {
     margin-top: 5px;
     list-style: none;
 }
 
-li {
+.choice-item-nobreak {
+    padding: 2px;
     display: flex;
     flex-direction: column;
     background-color: black;
+
+    border-radius: 3px;
 }
 
-li p {
+.choice-item-nobreak p {
     margin: 1.5px 5px;
-}
-
-main {
-    width: 290px;
-    height: auto;
-    background-color: rgb(0, 0, 70);
-    border: 1px solid green;
-}
-
-h5 {
-    text-align: center;
 }
 
 .p-alert {
@@ -35,17 +22,17 @@ h5 {
     padding: 5px;
 }
 
-input {
+.choice-input {
     margin-left: 10px;
     padding-left: 2px;
 }
 
-button {
+.choice-button {
     margin-left: 5px;
 }
 
 
-li:hover {
+.choice-item-nobreak:hover {
     cursor: pointer;
     background-color: rgb(0, 43, 80);
 }
