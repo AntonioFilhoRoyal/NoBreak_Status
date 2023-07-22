@@ -90,3 +90,6 @@ Começa o script para calcular o currentConsumption(consumo do equipamento) e ma
 19/07/2023 - Lista Inicial
 Criado a lista de incio, onde ira listar nobreaks entre 300-500v
 apos a escolha a lista some
+
+20/07/2023 - TESTE #1 FAILED
+Testando calculos pro estado do Nobreak

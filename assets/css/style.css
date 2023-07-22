@@ -139,8 +139,9 @@ body{
     flex-direction: column;
 }
 
-.aside-nobreak-profile .profile-list .area-consumption{
-
+.aside-nobreak-profile .profile-list .area-calculator{
+    display: flex;
+    flex-direction: row;
 }
 
 .main-div .section-nobreak-status{
@@ -234,11 +235,4 @@ body{
 .list .p{
     margin-top: 2px;
     margin-bottom: 2px;
-}
-
-.effect-blur{
-    background-color: #002211;
-    backdrop-filter: blur( 13.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
-    background-color: transparent;
 }

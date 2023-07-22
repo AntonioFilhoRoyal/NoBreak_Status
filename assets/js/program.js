@@ -1,4 +1,5 @@
 console.log("Estou aqui");
+let maxCompsution = 0;
 
 const main = document.querySelector('.main');
 const list = document.querySelector('.list');
@@ -21,12 +22,11 @@ function createdLi() {
 // LISTA DE EQUIPAMENTOS
 function listNobreak(equipament, consumption) {
     const li = createdLi();
-    const aux = consumption;
+    const aux = parseInt(consumption);
     li.innerText = `${equipament} - ${aux}V`;
     ulList.appendChild(li);
     clearInput();
-
-    return aux;
+    console.log(aux + 0);
 }
 
 // ADICIONA UM EQUIPAMENTO A LISTA
@@ -34,6 +34,7 @@ const buttonAddList = document.querySelector('.button-add-nobreak')
     .addEventListener('click', e => {
         e.preventDefault();
 
+        calcConsumption(inputConsumption.value);
         if (!inputEquipament.value && !inputConsumption.value) return;
         listNobreak(inputEquipament.value, inputConsumption.value);
     });
@@ -52,6 +53,7 @@ const areaBrand = document.querySelector('.area-brand');
 const areaModel = document.querySelector('.area-model');
 const areaLink = document.querySelector('.area-link');
 const areaConsumption = document.querySelector('.area-consumption');
+const areaCurrentConsumption = document.querySelector('.current-consumtion');
 
 function nobreakProfile(brand, model, link, consumption){
     areaBrand.innerHTML = brand;
@@ -65,8 +67,18 @@ function nobreakProfile(brand, model, link, consumption){
 
 
 // FUNÇÕES PARA CALCULO DO CONSUMO DO NOBREAK
-function calcConsumption(){
-
+function calcConsumption(currentConsumption){
+    const auxConsumption = parseInt(currentConsumption);
+    console.log(maxCompsution);
+    
+    let sum = 0;
+    sum += auxConsumption;
+    if(sum !== 350){   
+        areaCurrentConsumption.innerHTML = sum;
+    
+    } else {
+        alert("Carga excedida");
+    }
 }
 
 
@@ -111,6 +123,8 @@ window.addEventListener("load", (event) => {
         if(objetoNobreak[i].potencia <= 500){
            createList(objetoNobreak[i].marca, objetoNobreak[i].modelo, 
             objetoNobreak[i].potencia, objetoNobreak[i].value);
+            
+            maxCompsution = objetoNobreak[i].potencia;
         }
     }
 
