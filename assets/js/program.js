@@ -1,5 +1,4 @@
 console.log("Estou aqui");
-let maxCompsution = 0;
 
 const main = document.querySelector('.main');
 const list = document.querySelector('.list');
@@ -34,7 +33,9 @@ const buttonAddList = document.querySelector('.button-add-nobreak')
     .addEventListener('click', e => {
         e.preventDefault();
 
-        calcConsumption(inputConsumption.value);
+        if (!inputConsumption.value) return;
+        calc(inputConsumption.value);
+
         if (!inputEquipament.value && !inputConsumption.value) return;
         listNobreak(inputEquipament.value, inputConsumption.value);
     });
@@ -53,7 +54,7 @@ const areaBrand = document.querySelector('.area-brand');
 const areaModel = document.querySelector('.area-model');
 const areaLink = document.querySelector('.area-link');
 const areaConsumption = document.querySelector('.area-consumption');
-const areaCurrentConsumption = document.querySelector('.current-consumtion');
+const areaCurrentConsumption = document.querySelector('.current-consumption');
 
 function nobreakProfile(brand, model, link, consumption){
     areaBrand.innerHTML = brand;
@@ -67,18 +68,18 @@ function nobreakProfile(brand, model, link, consumption){
 
 
 // FUNÇÕES PARA CALCULO DO CONSUMO DO NOBREAK
-function calcConsumption(currentConsumption){
-    const auxConsumption = parseInt(currentConsumption);
-    console.log(maxCompsution);
-    
-    let sum = 0;
-    sum += auxConsumption;
-    if(sum !== 350){   
-        areaCurrentConsumption.innerHTML = sum;
-    
-    } else {
+function calc(consumption){
+    const con = parseInt(consumption);
+
+    const arr = [];
+    if(con < areaConsumption){
+        arr.push(con);
+    } else{
+        arr.push(0);
         alert("Carga excedida");
     }
+
+    console.log(arr);
 }
 
 
@@ -124,7 +125,7 @@ window.addEventListener("load", (event) => {
            createList(objetoNobreak[i].marca, objetoNobreak[i].modelo, 
             objetoNobreak[i].potencia, objetoNobreak[i].value);
             
-            maxCompsution = objetoNobreak[i].potencia;
+          
         }
     }
 
@@ -158,7 +159,7 @@ const objetoNobreak = [
     {marca : "NHS", modelo : "NHS Mini III", potencia : 500, link : "link.com.br", value : 1},
     {marca : "NHS", modelo : "NHS Compact III", potencia : 350, link : "link.com.br", value : 2},
     {marca : "NHS", modelo : "NHS Bivolt", potencia : 420, link : "link.com.br", value : 3},
-    {marca : "Microsol", modelo : "Mod.Iso 350v", potencia : 350, link : "link.com.br", value : 4}
+    {marca : "Microsol", modelo : "Mod.Iso 350v", potencia : 350, link : "link.com.br", value : 4},
 ];
 
 

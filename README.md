@@ -93,3 +93,6 @@ apos a escolha a lista some
 
 20/07/2023 - TESTE #1 FAILED
 Testando calculos pro estado do Nobreak
+
+25/07/2023 - TESTE #2 FAILED
+Testes de calculo do consumo do nobreak e lançamento de lista
