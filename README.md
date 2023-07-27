@@ -99,6 +99,7 @@ Testes de calculo do consumo do nobreak e lançamento de lista
 
 27/07/2023 - TESTE #3 SUCCESS
 Mais um teste de calculo.
+Com a ajuda de um amigo do discord, imnotgabriel_, conseguimos realizar o calculo e da um avanço no projeto.
 
   if (currentConsumption + con <= maxConsumption) {
     currentConsumption += con; // Adiciona o valor inserido pelo usuário à carga atual
