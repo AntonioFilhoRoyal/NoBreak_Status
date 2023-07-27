@@ -68,18 +68,23 @@ function nobreakProfile(brand, model, link, consumption){
 
 
 // FUNÇÕES PARA CALCULO DO CONSUMO DO NOBREAK
-function calc(consumption){
-    const con = parseInt(consumption);
+let currentConsumption = 0; // Variável para rastrear o valor atual da carga
+let maxConsumption = 0;
+// FUNÇÕES PARA CALCULO DO CONSUMO DO NOBREAK
+function calc(consumption) {
+  const con = parseInt(consumption);
 
-    const arr = [];
-    if(con < areaConsumption){
-        arr.push(con);
-    } else{
-        arr.push(0);
-        alert("Carga excedida");
-    }
+  if (currentConsumption + con <= maxConsumption) {
+    currentConsumption += con; // Adiciona o valor inserido pelo usuário à carga atual
+  } else {
+    alert("Carga excedida. O valor total não pode ultrapassar 500.");
+    
 
-    console.log(arr);
+  }
+
+  console.log(currentConsumption);
+  console.log(maxConsumption);
+  areaCurrentConsumption.innerHTML = currentConsumption;
 }
 
 
@@ -125,8 +130,10 @@ window.addEventListener("load", (event) => {
            createList(objetoNobreak[i].marca, objetoNobreak[i].modelo, 
             objetoNobreak[i].potencia, objetoNobreak[i].value);
             
-          
+            maxConsumption = objetoNobreak[i].potencia;
+            
         }
+
     }
 
 });

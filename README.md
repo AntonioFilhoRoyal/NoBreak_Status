@@ -96,3 +96,14 @@ Testando calculos pro estado do Nobreak
 
 25/07/2023 - TESTE #2 FAILED
 Testes de calculo do consumo do nobreak e lançamento de lista
+
+27/07/2023 - TESTE #3 SUCCESS
+Mais um teste de calculo.
+
+  if (currentConsumption + con <= maxConsumption) {
+    currentConsumption += con; // Adiciona o valor inserido pelo usuário à carga atual
+  } else {
+    alert("Carga excedida. O valor total não pode ultrapassar 500.");
+    
+
+  }
