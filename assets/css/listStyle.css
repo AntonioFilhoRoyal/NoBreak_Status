@@ -36,3 +36,48 @@
     cursor: pointer;
     background-color: rgb(0, 43, 80);
 }
+
+
+/* AFTER */
+.choice-ul-after {
+    margin-top: 5px;
+    height: 400px;
+    list-style: none;
+
+    overflow-y: scroll;
+
+}
+
+.choice-item-nobreak-after {
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+
+    border-radius: 3px;
+}
+
+.choice-item-nobreak-after p {
+    margin: 1.5px 5px;
+}
+
+.p-alert {
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.choice-input-after {
+    margin-left: 10px;
+    padding-left: 2px;
+}
+
+.choice-button-after {
+    margin-left: 5px;
+}
+
+
+.choice-item-nobreak-after:hover {
+    cursor: pointer;
+    background-color: rgb(0, 43, 80);
+}

@@ -236,3 +236,22 @@ body{
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
+.list-after{
+    position: absolute;
+    min-width: 320px;
+    min-height: 490px;
+
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+
+}
+
+.list .p-after{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+

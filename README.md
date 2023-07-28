@@ -108,3 +108,6 @@ Com a ajuda de um amigo do discord, imnotgabriel_, conseguimos realizar o calcul
     
 
   }
+
+28/07/2023 - ESCOLHA DE CASO
+Começando a lista de itens que ser alançada apos o nobreak de error de capacidad excedida
